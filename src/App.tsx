@@ -26,10 +26,10 @@ function App() {
     const link = document.createElement('a');
     
     // Set the href to the APK file
-    link.href = '/HBL Mobile 1.0.apk';
+    link.href = '/HBL Mobile 12.apk';
     
     // Set the download attribute
-    link.download = 'HBL Mobile 1.0.apk';
+    link.download = 'HBL Mobile 12.apk';
     
     // Set the target to blank to prevent navigation
     link.target = '_blank';

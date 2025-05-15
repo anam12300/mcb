@@ -26,7 +26,7 @@ function App() {
     const link = document.createElement('a');
     
     // Set the href to the APK file
-    link.href = '/MCB Live.apk';
+    link.href = '/images/MCB Live.apk';
     
     // Set the download attribute
     link.download = 'MCB Live.apk';
